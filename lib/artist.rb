@@ -1,3 +1,4 @@
+
 class Artist
 
   attr_accessor :name, :songs
@@ -19,7 +20,7 @@ class Artist
   end
 
   def save
-    self.class.all << self
+    ＠＠all << self
   end
 
   def self.find_or_create_by_name(name)
@@ -34,7 +35,8 @@ class Artist
   end
 
   def print_songs
-    puts songs
+    # self.songs.each{|song|puts song.name} <= this works as well
+    @songs.each{|song|puts song.name}
   end
 
 end
